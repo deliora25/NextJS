@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <nav className="header">
       <h1 className="logo">
-        <a href="#">NextAuth</a>
+        <a href="#">The Z Closet</a>
       </h1>
       <ul
         className={`main-nav ${
@@ -20,17 +20,7 @@ function Navbar() {
           </Link>
         </li>
         {session && (
-          <div style={{ display: "flex" }}>
-            <li>
-              <Link className="a" href="/dashboard">
-                Dashboard
-              </Link>
-            </li>
-            <li>
-              <Link className="a" href="/blog">
-                Blog
-              </Link>
-            </li>
+          <div>
             <li>
               <Link href="/api/auth/signout" onClick={() => signOut("github")}>
                 Sign out
@@ -40,15 +30,27 @@ function Navbar() {
         )}
 
         {!session && status !== "loading" && (
-          <li>
-            <Link
-              className="a"
-              href="/api/auth/signin"
-              onClick={() => signIn("github")}
-            >
-              Sign in
-            </Link>
-          </li>
+          <div style={{ display: "flex" }}>
+            <li>
+              <Link className="a" href="/dashboard">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link className="a" href="/blog">
+                Opportunities
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="a"
+                href="/api/auth/signin"
+                onClick={() => signIn("github")}
+              >
+                Sign in
+              </Link>
+            </li>
+          </div>
         )}
       </ul>
     </nav>

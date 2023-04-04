@@ -8,6 +8,7 @@ h2,
 h3,
 a {
   color: #34495e;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
@@ -17,6 +18,7 @@ a {
 .logo {
   margin: 0;
   font-size: 1.45em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .main-nav {
